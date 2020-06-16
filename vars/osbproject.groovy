@@ -4,17 +4,17 @@ stage('CheckOut'){
       steps{
         script {
 		try {
-			git clone_url    //'https://github.com/nikhil2602/helloworldrepo.git'
+			//git clone_url    //'https://github.com/nikhil2602/helloworldrepo.git'
 			
             		//echo 'ref details  ' + ref
 			//echo 'repo url ' + url
-			
-			slackNotification.status1 (env.JOB_NAME,env.BUILD_NUMBER,env.STAGE_NAME)
+			println("try block");
+			//slackNotification.status1 (env.JOB_NAME,env.BUILD_NUMBER,env.STAGE_NAME)
 		}
 		catch (Exception e) {
 			//println("exception occured");
-			slackNotification.status2 (env.JOB_NAME,env.BUILD_NUMBER,env.STAGE_NAME)
-			
+			//slackNotification.status2 (env.JOB_NAME,env.BUILD_NUMBER,env.STAGE_NAME)
+			println("catch block");
 		}
         }
       }
