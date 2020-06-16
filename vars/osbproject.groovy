@@ -1,3 +1,4 @@
+def call() {
 stage('CheckOut'){
 	    
       steps{
@@ -92,3 +93,4 @@ stage('CheckOut'){
 		 }
 	  }
       }*/
+}
